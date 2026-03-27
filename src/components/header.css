@@ -26,6 +26,7 @@ header {
 .nav_li {
     color: #33383F;
     cursor: pointer;
+    position: relative;
 }
 .right {
     display: flex;
@@ -37,22 +38,32 @@ header {
     color: #0070A0;
     font-size: 15px;
     font-weight: 400;
-    cursor: pointer;
-}
-.demo {
-    background-color: #0070A0;
-    color: white;
-    border: none;
-    padding: 5px 15px;
-    cursor: pointer;
 }
 
-.nav_li:hover{
+.nav_li::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    background-color: #055b80;
+    transform: translateX(-50%);
+    transition: all 0.3s ease-in;
+}
+
+.nav_li:hover::after {
+    width: 100%;
+}
+.nav_li:hover {
     color: #055b80;
 }
+
+
 .sing:hover {
     color: #055b80;
 }
 .demo:hover {
     background-color: #055b80;
+    color: white;
 }

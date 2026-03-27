@@ -1,6 +1,7 @@
 import React from 'react'
 import "./header.css"
 import logo from "/IMAGE.png"
+import { Button } from '@mui/material'
 
 const Header = () => {
   return (
@@ -21,8 +22,8 @@ const Header = () => {
               </ul>
             </div>
             <div className="right">
-              <button className='sing'>Sign in</button>
-              <button className='demo'>Book a demo</button>
+              <Button variant='text' className='sing'>Sign in</Button>
+              <Button sx={{backgroundColor: "#0070A0"}} variant='contained' className='demo'>Book a demo</Button>
             </div>
         </header>
     </div>
