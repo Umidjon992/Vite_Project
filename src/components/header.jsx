@@ -1,6 +1,6 @@
 import React from 'react'
 import "./header.css"
-import logo from "/IMAGE.png"
+import logo from "/LOGO.png"
 import { Button } from '@mui/material'
 
 const Header = () => {
